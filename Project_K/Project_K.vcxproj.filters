@@ -31,6 +31,9 @@
     <Filter Include="Object\Player\Elf">
       <UniqueIdentifier>{d784fab5-391b-466d-ab6d-ce57093cb1b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Kinnikurou">
+      <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="Scene\SceneTitle.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Kinnikurou\Kinnikurou.cpp">
+      <Filter>Object\Player\Kinnikurou</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="Scene\SceneCharacterSelect.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h">
+      <Filter>Object\Player\Kinnikurou</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
