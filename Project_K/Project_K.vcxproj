@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Object\Player\Kinnikurou\Kinnikurou.cpp" />
     <ClCompile Include="Object\Player\Base\MoveTypeBase.cpp" />
     <ClCompile Include="Object\Player\Elf\ElfAttackArrowChargeShot.cpp" />
     <ClCompile Include="Object\Player\elf\ElfAttackArrowPunch.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="Util\Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h" />
     <ClInclude Include="Object\Player\Base\MoveTypeBase.h" />
     <ClInclude Include="Object\Player\Elf\ElfAttackArrowChargeShot.h" />
     <ClInclude Include="Object\Player\elf\ElfAttackArrowPunch.h" />
