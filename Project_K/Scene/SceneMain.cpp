@@ -12,7 +12,7 @@
 
 namespace// ここは仮のネームスペースです 候補：キャラ選択画面
 {
-	const char* const kPlayerImage = "Data/Image/Player/Elf.png";
+	const char* const kPlayerImage = "Data/Image/Player/Elf/Elf.png";
 }
 SceneMain::SceneMain(bool player) :
 	m_pos             (0.0f,0.0f),// プレイヤー位置
