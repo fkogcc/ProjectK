@@ -5,8 +5,8 @@
 class ElfIdol : public MoveTypeBase
 {
 public:
-	ElfIdol() {};
-	virtual ~ElfIdol() {};
+	ElfIdol() {}
+	virtual ~ElfIdol() {}
 
 	void Update();// XV
 };
