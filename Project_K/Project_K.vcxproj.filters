@@ -16,12 +16,6 @@
     <Filter Include="Object">
       <UniqueIdentifier>{2cde83f2-c095-4e56-9072-e7cc02765e67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{ccdb5e5f-f848-45be-a944-be0fc02b988f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util">
-      <UniqueIdentifier>{ff88e6fa-cb06-4a1e-9010-a05f667bcf94}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Object\Player">
       <UniqueIdentifier>{e7a6b0f6-7729-4b3f-9aac-63cff44ded27}</UniqueIdentifier>
     </Filter>
@@ -34,22 +28,28 @@
     <Filter Include="Object\Player\Kinnikurou">
       <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{ccdb5e5f-f848-45be-a944-be0fc02b988f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Util">
+      <UniqueIdentifier>{ff88e6fa-cb06-4a1e-9010-a05f667bcf94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Dinosaur">
+      <UniqueIdentifier>{32abff7e-4651-4ad4-b98b-9085551a938a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneManager.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneMain.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneBase.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Util\Vec2.cpp">
-      <Filter>Util</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Object\Player\Base\PlayerBase.cpp">
       <Filter>Object\Player\Base</Filter>
@@ -63,12 +63,6 @@
     <ClCompile Include="Object\Player\Base\MoveTypeBase.cpp">
       <Filter>Object\Player\Base</Filter>
     </ClCompile>
-    <ClCompile Include="Util\DrawFunctions.cpp">
-      <Filter>Util</Filter>
-    </ClCompile>
-    <ClCompile Include="Util\Pad.cpp">
-      <Filter>Util</Filter>
-    </ClCompile>
     <ClCompile Include="Object\Player\Elf\ElfIdol.cpp">
       <Filter>Object\Player\Elf</Filter>
     </ClCompile>
@@ -79,36 +73,57 @@
       <Filter>Object\Player\Elf</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneCharacterSelect.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneMapSelect.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneResult.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneTitle.cpp">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Object\Player\Kinnikurou\Kinnikurou.cpp">
       <Filter>Object\Player\Kinnikurou</Filter>
     </ClCompile>
+    <ClCompile Include="Util\DrawFunctions.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Pad.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Vec2.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\Dinosaur.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="DinosaurAttackBase.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="DinosaurAttackBite.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="DinosaurAttackScratch.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="DinosaurAttackShot.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="DinosaurAttackPounce.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\SceneBase.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneMain.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneManager.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\Vec2.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\game.h">
-      <Filter>Util</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Object\Player\Base\PlayerBase.h">
       <Filter>Object\Player\Base</Filter>
@@ -121,12 +136,6 @@
     </ClInclude>
     <ClInclude Include="Object\Player\Base\MoveTypeBase.h">
       <Filter>Object\Player\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\DrawFunctions.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\Pad.h">
-      <Filter>Util</Filter>
     </ClInclude>
     <ClInclude Include="Object\Player\Elf\ElfIdol.h">
       <Filter>Object\Player\Elf</Filter>
@@ -141,19 +150,49 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneTitle.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneResult.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneMapSelect.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneCharacterSelect.h">
-      <Filter>Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h">
       <Filter>Object\Player\Kinnikurou</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\DrawFunctions.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\game.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Pad.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Vec2.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\Dinosaur.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="DinosaurAttackBase.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="DinosaurAttackBite.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="DinosaurAttackScratch.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="DinosaurAttackShot.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="DinosaurAttackPounce.h">
+      <Filter>Object\Player\Dinosaur</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

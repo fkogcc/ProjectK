@@ -1,3 +1,4 @@
+
 #include <cassert>
 #include "SceneManager.h"
 #include "SceneMain.h"

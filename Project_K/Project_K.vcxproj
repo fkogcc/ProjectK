@@ -110,13 +110,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>DrawingLibrary\プロジェクトに追加すべきファイル_VC用;$(DXLIB_DIR)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;DrawingLibrary\プロジェクトに追加すべきファイル_VC用;$(DXLIB_DIR)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>DrawingLibrary\プロジェクトに追加すべきファイル_VC用;$(DXLIB_DIR)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用;DrawingLibrary\プロジェクトに追加すべきファイル_VC用;$(DXLIB_DIR)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,6 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DinosaurAttackBase.cpp" />
+    <ClCompile Include="DinosaurAttackBite.cpp" />
+    <ClCompile Include="DinosaurAttackPounce.cpp" />
+    <ClCompile Include="DinosaurAttackScratch.cpp" />
+    <ClCompile Include="DinosaurAttackShot.cpp" />
+    <ClCompile Include="Object\Player\Dinosaur\Dinosaur.cpp" />
     <ClCompile Include="Object\Player\Kinnikurou\Kinnikurou.cpp" />
     <ClCompile Include="Object\Player\Base\MoveTypeBase.cpp" />
     <ClCompile Include="Object\Player\Elf\ElfAttackArrowChargeShot.cpp" />
@@ -160,6 +166,12 @@
     <ClCompile Include="Util\Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DinosaurAttackBase.h" />
+    <ClInclude Include="DinosaurAttackBite.h" />
+    <ClInclude Include="DinosaurAttackPounce.h" />
+    <ClInclude Include="DinosaurAttackScratch.h" />
+    <ClInclude Include="DinosaurAttackShot.h" />
+    <ClInclude Include="Object\Player\Dinosaur\Dinosaur.h" />
     <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h" />
     <ClInclude Include="Object\Player\Base\MoveTypeBase.h" />
     <ClInclude Include="Object\Player\Elf\ElfAttackArrowChargeShot.h" />
