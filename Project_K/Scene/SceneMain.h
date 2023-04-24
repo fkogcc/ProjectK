@@ -10,6 +10,7 @@ class ElfIdol;
 class ElfAttackArrowPunch;
 class ElfAttackArrowShot;
 class ElfAttackArrowChargeShot;
+class Kinnikurou;
 
 class SceneMain : public SceneBase
 {
@@ -46,6 +47,8 @@ private:
 	ElfAttackArrowPunch*      m_pElfAttackNormal;
 	ElfAttackArrowShot*       m_pElfAttackShot;
 	ElfAttackArrowChargeShot* m_pElfAttackChargeShot;
+
+	Kinnikurou*				  m_pKinnikurou;
 
 	bool m_isPlayerDrawTest;
 
