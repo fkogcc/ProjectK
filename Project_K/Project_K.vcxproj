@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Object\Player\Kinnikurou\KinnikurouJab.cpp" />
     <ClCompile Include="Object\Player\Kinnikurou\Kinnikurou.cpp" />
     <ClCompile Include="Object\Player\Base\MoveTypeBase.cpp" />
     <ClCompile Include="Object\Player\Elf\ElfAttackArrowChargeShot.cpp" />
@@ -156,11 +157,13 @@
     <ClCompile Include="Scene\SceneMapSelect.cpp" />
     <ClCompile Include="Scene\SceneResult.cpp" />
     <ClCompile Include="Scene\SceneTitle.cpp" />
+    <ClCompile Include="Object\Stage\Stage.cpp" />
     <ClCompile Include="Util\DrawFunctions.cpp" />
     <ClCompile Include="Util\Pad.cpp" />
     <ClCompile Include="Util\Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Object\Player\Kinnikurou\KinnikurouJab.h" />
     <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h" />
     <ClInclude Include="Object\Player\Base\MoveTypeBase.h" />
     <ClInclude Include="Object\Player\Elf\ElfAttackArrowChargeShot.h" />
@@ -175,6 +178,7 @@
     <ClInclude Include="Scene\SceneMapSelect.h" />
     <ClInclude Include="Scene\SceneResult.h" />
     <ClInclude Include="Scene\SceneTitle.h" />
+    <ClInclude Include="Object\Stage\Stage.h" />
     <ClInclude Include="Util\DrawFunctions.h" />
     <ClInclude Include="Util\game.h" />
     <ClInclude Include="Scene\SceneBase.h" />
