@@ -34,6 +34,9 @@
     <Filter Include="Object\Player\Kinnikurou">
       <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Stage">
+      <UniqueIdentifier>{e34a5535-eda2-4eb7-9f88-b0f3273c830a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="Object\Player\Kinnikurou\KinnnikuIdle.cpp">
       <Filter>Object\Player\Kinnikurou</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Stage\Stage.cpp">
+      <Filter>Object\Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +166,9 @@
     </ClInclude>
     <ClInclude Include="Object\Player\Kinnikurou\KinnnikuIdle.h">
       <Filter>Object\Player\Kinnikurou</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Stage\Stage.h">
+      <Filter>Object\Stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

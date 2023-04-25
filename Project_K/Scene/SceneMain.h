@@ -11,6 +11,7 @@ class ElfAttackArrowPunch;
 class ElfAttackArrowShot;
 class ElfAttackArrowChargeShot;
 class Kinnikurou;
+class Stage;
 
 class SceneMain : public SceneBase
 {
@@ -49,6 +50,8 @@ private:
 	ElfAttackArrowChargeShot* m_pElfAttackChargeShot;
 
 	Kinnikurou*				  m_pKinnikurou;
+
+	std::shared_ptr<Stage> m_pStage;// ステージのポインタ
 
 	bool m_isPlayerDrawTest;
 
