@@ -14,25 +14,34 @@ namespace// ここは仮のネームスペースです 候補：キャラ選択画面
 {
 	const char* const kPlayerImage = "Data/Image/Player/Elf/Elf.png";
 }
-SceneMain::SceneMain(bool player) :
+SceneMain::SceneMain(bool player1, bool player2, bool player3, bool player4) :
 	m_pos             (0.0f,0.0f),// プレイヤー位置
 	m_pElf            (nullptr),  // エルフ用ポインタ類
 	m_pElfIdol        (nullptr),
 	m_pElfAttackNormal(nullptr),
 	m_pElfAttackShot  (nullptr),
-	m_pElfAttackChargeShot(nullptr),
-	m_isPlayerDrawTest    (player)
+	m_pElfAttackChargeShot(nullptr)
 {
+	m_isPlayerDrawTest[0] = player1;
+	m_isPlayerDrawTest[1] = player2;
+	m_isPlayerDrawTest[2] = player3;
+	m_isPlayerDrawTest[3] = player4;
+
 	m_pElf                 = new Elf;// エルフ用ポインタ類
 	m_pElfIdol             = new ElfIdol;
 	m_pElfAttackNormal     = new ElfAttackArrowPunch;
 	m_pElfAttackShot       = new ElfAttackArrowShot;
 	m_pElfAttackChargeShot = new ElfAttackArrowChargeShot;
 
-	//for (auto& test : m_testNum)
-	//{
-	//	test = { 0,0 };
-	//}
+	for (int i = 0; i < 4; i++)
+	{
+		m_vPos.push_back(Vec2(0.0f, 0.0f));
+		m_vImageX.push_back(0);
+		m_vImageY.push_back(0);
+		m_vImageSizeX.push_back(288);
+		m_vImageSizeY.push_back(128);
+		m_vHPlayer.push_back(-1);
+	}
 }
 
 SceneMain::~SceneMain()
@@ -46,7 +55,8 @@ SceneMain::~SceneMain()
 
 void SceneMain::Init()
 {
-	m_hPlayer = my::MyLoadGraph(kPlayerImage);// メモリに画像データ読み込み
+//	m_hPlayer = my::MyLoadGraph(kPlayerImage);// メモリに画像データ読み込み
+	m_vHPlayer[0] = my::MyLoadGraph(kPlayerImage);// メモリに画像データ読み込み
 
 	//writing_file.open(filename, std::ios::ate);//appファイル末尾から入力開始
 	//writing_file.close();// ファイルを閉じる
@@ -62,8 +72,10 @@ void SceneMain::ElfMoveIdol()// エルフ待機モーション
 	m_pElfIdol->Update();// エルフのアイドル状態
 	if (m_pElf->SetMove() == static_cast<int>(moveType::Idol))// 何もしていない場合はアイドル状態
 	{
-		m_imageX = m_pElfIdol->SetPosImageX();// アイドル状態用画像モーション位置
-		m_imageY = m_pElfIdol->SetPosImageY();
+		//m_imageX = m_pElfIdol->SetPosImageX();// アイドル状態用画像モーション位置
+		//m_imageY = m_pElfIdol->SetPosImageY();
+		m_vImageX[0] = m_pElfIdol->SetPosImageX();// アイドル状態用画像モーション位置
+		m_vImageY[0] = m_pElfIdol->SetPosImageY();
 	}
 }
 
@@ -76,8 +88,10 @@ void SceneMain::ElfMoveAttack()// エルフ基本攻撃モーション
 	}
 	if (m_pElfAttackNormal->IsSetMove())// 攻撃アニメーションを再生
 	{
-		m_imageX = m_pElfAttackNormal->SetPosImageX();// 攻撃用画像モーション位置
-		m_imageY = m_pElfAttackNormal->SetPosImageY();
+	//	m_imageX = m_pElfAttackNormal->SetPosImageX();// 攻撃用画像モーション位置
+	//	m_imageY = m_pElfAttackNormal->SetPosImageY();
+		m_vImageX[0] = m_pElfAttackNormal->SetPosImageX();// 攻撃用画像モーション位置
+		m_vImageY[0] = m_pElfAttackNormal->SetPosImageY();
 
 		if (!m_pElfAttackNormal->IsSetMove())// アニメーションが最後まで再生されたら
 		{
@@ -95,8 +109,10 @@ void SceneMain::ElfMoveAttackShot()
 	}
 	if (m_pElfAttackShot->IsSetMove())// 攻撃アニメーションを再生
 	{
-		m_imageX = m_pElfAttackShot->SetPosImageX();// 攻撃用画像モーション位置
-		m_imageY = m_pElfAttackShot->SetPosImageY();
+	//  m_imageX = m_pElfAttackShot->SetPosImageX();// 攻撃用画像モーション位置
+	//	m_imageY = m_pElfAttackShot->SetPosImageY();
+		m_vImageX[0] = m_pElfAttackShot->SetPosImageX();// 攻撃用画像モーション位置
+		m_vImageY[0] = m_pElfAttackShot->SetPosImageY();
 
 		if (!m_pElfAttackShot->IsSetMove())// アニメーションが最後まで再生されたら
 		{
@@ -114,8 +130,10 @@ void SceneMain::ElfMoveAttackChargeShot()
 	}
 	if (m_pElfAttackChargeShot->IsSetMove())// 攻撃アニメーションを再生
 	{
-		m_imageX = m_pElfAttackChargeShot->SetPosImageX();// 攻撃用画像モーション位置
-		m_imageY = m_pElfAttackChargeShot->SetPosImageY();
+	//	m_imageX = m_pElfAttackChargeShot->SetPosImageX();// 攻撃用画像モーション位置
+	//	m_imageY = m_pElfAttackChargeShot->SetPosImageY();
+		m_vImageX[0] = m_pElfAttackChargeShot->SetPosImageX();// 攻撃用画像モーション位置
+		m_vImageY[0] = m_pElfAttackChargeShot->SetPosImageY();
 
 		if (!m_pElfAttackChargeShot->IsSetMove())// アニメーションが最後まで再生されたら
 		{
@@ -126,8 +144,11 @@ void SceneMain::ElfMoveAttackChargeShot()
 
 void SceneMain::ElfData()// エルフ位置などの代入
 {
-	m_pos.x = m_pElf->SetPos().x;// エルフの位置
-	m_pos.y = m_pElf->SetPos().y;
+	//m_pos.x = m_pElf->SetPos().x;// エルフの位置
+	//m_pos.y = m_pElf->SetPos().y;
+
+	m_vPos[0].x = m_pElf->SetPos().x;// エルフの位置
+	m_vPos[0].y = m_pElf->SetPos().y;
 
 	m_left   = m_pElf->SetPosLeft  ();
 	m_top    = m_pElf->SetPosTop   ();
@@ -147,6 +168,8 @@ SceneBase* SceneMain::Update()
 		ElfData                ();// エルフ位置,方向,攻撃力,のデータ
 	}
 
+
+
 	return this;
 }
 
@@ -155,13 +178,21 @@ void SceneMain::Draw()
 	if (m_isPlayerDrawTest)// エルフが選択されたかどうか
 	{
 		// プレイヤーアニメーション描画
-		my::MyDrawRectRotaGraph(m_pos.x, m_pos.y,
-			m_imageX, m_imageY, 288, 128,
-			1.5 * 3, DX_PI * 2, m_hPlayer, true, false);
+		//my::MyDrawRectRotaGraph(m_pos.x, m_pos.y,
+		//	m_imageX, m_imageY, 288, 128,
+		//	1.5 * 3, DX_PI * 2, m_hPlayer, true, false);
 		// エルフの画像１キャラ
 		// 横288
 		// 縦136
 	}
+
+	for (int i = 0; i < 4; i++)
+	{
+		my::MyDrawRectRotaGraph(m_vPos[i].x, m_vPos[i].y,
+			m_vImageX[i], m_vImageY[i], m_vImageSizeX[i], m_vImageSizeY[i],
+			1.5 * 3, DX_PI * 2, m_vHPlayer[i], true, false);
+	}
+
 
 	DrawBox(m_left, m_top, m_right,m_bottom,0xff0000,false);// 当たり判定確認用
 }
