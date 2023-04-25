@@ -48,7 +48,7 @@ private:
 	ElfAttackArrowShot*       m_pElfAttackShot;
 	ElfAttackArrowChargeShot* m_pElfAttackChargeShot;
 
-	Kinnikurou*				  m_pKinnikurou;
+	Kinnikurou*				  m_pKinnikurou;// 
 
 	bool m_isPlayerDrawTest;
 
