@@ -1,5 +1,6 @@
 #pragma once
 #include "../../Util/Vec2.h"
+#include "../../Util/game.h"
 
 namespace
 {
