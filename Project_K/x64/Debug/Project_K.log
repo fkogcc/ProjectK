@@ -1,3 +1,2 @@
-﻿  Stage.cpp
-KinnnikuIdle.obj : warning LNK4204: 'C:\Users\fko2247099\Desktop\ProjectK\Project_K\x64\Debug\vc143.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
-  Project_K.vcxproj -> C:\Users\fko2247099\Desktop\ProjectK\Project_K\x64\Debug\Project_K.exe
+﻿  Witch.cpp
+  Project_K.vcxproj -> C:\Users\fko2247078\Desktop\ProjectK\Project_K\x64\Debug\Project_K.exe

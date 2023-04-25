@@ -34,6 +34,9 @@
     <Filter Include="Object\Player\Kinnikurou">
       <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Witch">
+      <UniqueIdentifier>{68054d6d-bcea-4e09-9b48-828da551a3a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -96,8 +99,11 @@
     <ClCompile Include="Object\Player\Kinnikurou\KinnnikuIdle.cpp">
       <Filter>Object\Player\Kinnikurou</Filter>
     </ClCompile>
-    <ClCompile Include="Object\Player\Kinnikurou\KinnikurouJab.cpp">
-      <Filter>Object\Player\Kinnikurou</Filter>
+    <ClCompile Include="Object\Player\Witch\Witch.cpp">
+      <Filter>Object\Player\Witch</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Witch\WitchShot.cpp">
+      <Filter>Object\Player\Witch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,8 +170,11 @@
     <ClInclude Include="Object\Player\Kinnikurou\KinnnikuIdle.h">
       <Filter>Object\Player\Kinnikurou</Filter>
     </ClInclude>
-    <ClInclude Include="Object\Player\Kinnikurou\KinnikurouJab.h">
-      <Filter>Object\Player\Kinnikurou</Filter>
+    <ClInclude Include="Object\Player\Witch\Witch.h">
+      <Filter>Object\Player\Witch</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Witch\WitchShot.h">
+      <Filter>Object\Player\Witch</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
