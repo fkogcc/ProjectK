@@ -2,6 +2,7 @@
 #include "../../condition.h"
 #include "../../Util/DrawFunctions.h"
 #include "KinnnikuIdle.h"
+#include "KinnikurouJab.h"
 
 namespace
 {
@@ -10,7 +11,7 @@ namespace
 }
 
 Kinnikurou::Kinnikurou() :
-	m_pIdle(new Kinnikurou),
+	m_pIdle(nullptr),
 	m_pushBottom(false),
 	m_charHandle(-1),
 	m_idleHandle(-1),
@@ -20,7 +21,7 @@ Kinnikurou::Kinnikurou() :
 	m_imgPosX(0),
 	m_imgPosY(0)
 {
-
+	m_pIdle = new KinnikurouIdle;
 }
 
 Kinnikurou::~Kinnikurou()
@@ -60,6 +61,7 @@ void Kinnikurou::Update()
 	if (Pad::isPress(PAD_INPUT_LEFT))m_pos.x -= 10;
 
 	// ÉAÉCÉhÉãèÛë‘
+	if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update();
 	if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update();
 
 
