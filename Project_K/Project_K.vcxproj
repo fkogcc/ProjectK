@@ -159,6 +159,8 @@
     <ClCompile Include="Util\DrawFunctions.cpp" />
     <ClCompile Include="Util\Pad.cpp" />
     <ClCompile Include="Util\Vec2.cpp" />
+    <ClCompile Include="Object\Player\Witch\Witch.cpp" />
+    <ClCompile Include="Object\Player\Witch\WitchShot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Object\Player\Kinnikurou\Kinnikurou.h" />
@@ -182,6 +184,8 @@
     <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Util\Pad.h" />
     <ClInclude Include="Util\Vec2.h" />
+    <ClInclude Include="Object\Player\Witch\Witch.h" />
+    <ClInclude Include="Object\Player\Witch\WitchShot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
