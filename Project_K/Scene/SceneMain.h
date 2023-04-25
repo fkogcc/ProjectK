@@ -4,18 +4,19 @@
 
 #include <fstream>
 #include <string>
-#include <vector>
 
 class Elf;
 class ElfIdol;
 class ElfAttackArrowPunch;
 class ElfAttackArrowShot;
 class ElfAttackArrowChargeShot;
+class Kinnikurou;
+class Stage;
 
 class SceneMain : public SceneBase
 {
 public:
-	SceneMain(bool player1, bool player2, bool player3, bool player4);
+	SceneMain(bool player);
 	virtual ~SceneMain();
 
 	virtual void Init();
@@ -28,26 +29,19 @@ public:
 
 private:
 
-	void ElfMoveIdol            ();// エルフ待機モーション
-	void ElfMoveAttack          ();// エルフ基本攻撃モーション
-	void ElfMoveAttackShot      ();// エルフ弓矢で攻撃モーション
-	void ElfMoveAttackChargeShot();// エルフチャージショット攻撃モーション
-	void ElfData            ();// エルフ位置,方向,攻撃力,のデータ
+	virtual void ElfMoveIdol            ();// エルフ待機モーション
+	virtual void ElfMoveAttack          ();// エルフ基本攻撃モーション
+	virtual void ElfMoveAttackShot      ();// エルフ弓矢で攻撃モーション
+	virtual void ElfMoveAttackChargeShot();// エルフチャージショット攻撃モーション
+	virtual void ElfData            ();// エルフ位置,方向,攻撃力,のデータ
 
 	int m_hPlayer = -1;// プレイヤー画像データ
-	std::vector<int>m_vHPlayer;
-
-	int m_playerNum;
 
 	int m_imageX = 0,m_imageY = 0;// プレイヤー画像位置
-	std::vector<int>m_vImageX, m_vImageY;
-	std::vector<int>m_vImageSizeX, m_vImageSizeY;
 
 	int m_left = 0, m_top = 0, m_right = 0, m_bottom = 0;
 
-	Vec2 m_pos = {0.0f,0.0f};//プレイヤー位置
-
-	std::vector<Vec2> m_vPos = { {0.0f,0.0f},{0.0f,0.0f} };// プレイヤー位置を宣言
+	Vec2 m_pos = { 0.0f,0.0f };//プレイヤー位置
 
 	Elf*				      m_pElf;// エルフポインタ類
 	ElfIdol*			      m_pElfIdol;
@@ -55,13 +49,15 @@ private:
 	ElfAttackArrowShot*       m_pElfAttackShot;
 	ElfAttackArrowChargeShot* m_pElfAttackChargeShot;
 
-	bool m_isPlayerDrawTest[4];
+	Kinnikurou*				  m_pKinnikurou;
+
+	std::shared_ptr<Stage> m_pStage;// ステージのポインタ
+
+	bool m_isPlayerDrawTest;
 
 	std::ofstream writing_file;
 	std::string filename = "Test.csv";
 
 	std::string str;
-
-
 };
 
