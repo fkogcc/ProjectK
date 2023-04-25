@@ -8,7 +8,7 @@ DinosaurAttackScratch::~DinosaurAttackScratch()
 {
 }
 
-DinosaurAttackBase* DinosaurAttackScratch::Update()
+DinosaurStateBase* DinosaurAttackScratch::Update()
 {
 	return this;
 }

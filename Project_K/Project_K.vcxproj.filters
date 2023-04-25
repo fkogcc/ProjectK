@@ -34,6 +34,9 @@
     <Filter Include="Object\Player\Kinnikurou">
       <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Dinosaur">
+      <UniqueIdentifier>{a9655d2b-1978-44c0-a4df-7be7e2e04e3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +98,36 @@
     </ClCompile>
     <ClCompile Include="Object\Player\Kinnikurou\KinnnikuIdle.cpp">
       <Filter>Object\Player\Kinnikurou</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\Dinosaur.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurStateBase.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackBite.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackPounce.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackScratch.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackShot.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackManager.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurIdle.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurJump.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\Dinosaur\DinosaurMove.cpp">
+      <Filter>Object\Player\Dinosaur</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +193,36 @@
     </ClInclude>
     <ClInclude Include="Object\Player\Kinnikurou\KinnnikuIdle.h">
       <Filter>Object\Player\Kinnikurou</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\Dinosaur.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurStateBase.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackBite.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackPounce.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackScratch.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackShot.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackManager.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurIdle.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurJump.h">
+      <Filter>Object\Player\Dinosaur</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\Dinosaur\DinosaurMove.h">
+      <Filter>Object\Player\Dinosaur</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

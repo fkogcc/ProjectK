@@ -8,7 +8,7 @@ DinosaurAttackShot::~DinosaurAttackShot()
 {
 }
 
-DinosaurAttackBase* DinosaurAttackShot::Update()
+DinosaurStateBase* DinosaurAttackShot::Update()
 {
 	return this;
 }

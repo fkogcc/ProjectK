@@ -1,5 +1,7 @@
 #pragma once
 #include "../Base/PlayerBase.h"
+
+class DinosaurAttackManager;
 class Dinosaur : public PlayerBase
 {
 public:
@@ -11,5 +13,6 @@ public:
 	void Update();// XV
 	void Draw();// •`‰æ
 private:
+	DinosaurAttackManager* m_AttackManager;
 };
 

@@ -8,7 +8,7 @@ DinosaurAttackPounce::~DinosaurAttackPounce()
 {
 }
 
-DinosaurAttackBase* DinosaurAttackPounce::Update()
+DinosaurStateBase* DinosaurAttackPounce::Update()
 {
 	return nullptr;
 }
