@@ -2,7 +2,8 @@
 
 #include "../Base/PlayerBase.h"
 
-class KinnikurouIdle;
+class KinnnikurouIdle;
+class KinnikurouJab;
 
 class Kinnikurou : public PlayerBase
 {
@@ -16,11 +17,14 @@ public:
 	void Draw  ();// 描画
 private:
 
-	Kinnikurou* m_pIdle;
+	KinnnikurouIdle* m_pIdle;
+
+	bool m_pushBottom;
 
 	// ハンドル
+	int m_charHandle;// キャラクター全体
 	int m_idleHandle;// アイドル状態
-	
+	int m_jabHandle;// ジャブ攻撃状態
 
 	// 描画座標
 	int m_drawPosX;// X
