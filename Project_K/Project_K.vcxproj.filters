@@ -34,13 +34,8 @@
     <Filter Include="Object\Player\Kinnikurou">
       <UniqueIdentifier>{085c46f5-16a8-4878-a344-7c97240cd2da}</UniqueIdentifier>
     </Filter>
-<<<<<<< Updated upstream
     <Filter Include="Object\Player\Witch">
       <UniqueIdentifier>{68054d6d-bcea-4e09-9b48-828da551a3a6}</UniqueIdentifier>
-=======
-    <Filter Include="Object\Player\Dinosaur">
-      <UniqueIdentifier>{d107a3f0-7b4f-4b0c-8f03-afb2f998b5db}</UniqueIdentifier>
->>>>>>> Stashed changes
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -104,31 +99,11 @@
     <ClCompile Include="Object\Player\Kinnikurou\KinnnikuIdle.cpp">
       <Filter>Object\Player\Kinnikurou</Filter>
     </ClCompile>
-<<<<<<< Updated upstream
     <ClCompile Include="Object\Player\Witch\Witch.cpp">
       <Filter>Object\Player\Witch</Filter>
     </ClCompile>
     <ClCompile Include="Object\Player\Witch\WitchShot.cpp">
       <Filter>Object\Player\Witch</Filter>
-=======
-    <ClCompile Include="Object\Player\Dinosaur\Dinosaur.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackBase.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackBite.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackPounce.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackScratch.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClCompile>
-    <ClCompile Include="Object\Player\Dinosaur\DinosaurAttackShot.cpp">
-      <Filter>Object\Player\Dinosaur</Filter>
->>>>>>> Stashed changes
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -195,31 +170,11 @@
     <ClInclude Include="Object\Player\Kinnikurou\KinnnikuIdle.h">
       <Filter>Object\Player\Kinnikurou</Filter>
     </ClInclude>
-<<<<<<< Updated upstream
     <ClInclude Include="Object\Player\Witch\Witch.h">
       <Filter>Object\Player\Witch</Filter>
     </ClInclude>
     <ClInclude Include="Object\Player\Witch\WitchShot.h">
       <Filter>Object\Player\Witch</Filter>
-=======
-    <ClInclude Include="Object\Player\Dinosaur\Dinosaur.h">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackBase.h">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackBite.h">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackPounce.h">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackScratch.h">
-      <Filter>Object\Player\Dinosaur</Filter>
-    </ClInclude>
-    <ClInclude Include="Object\Player\Dinosaur\DinosaurAttackShot.h">
-      <Filter>Object\Player\Dinosaur</Filter>
->>>>>>> Stashed changes
     </ClInclude>
   </ItemGroup>
 </Project>
