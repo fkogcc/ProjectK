@@ -5,14 +5,19 @@
 #include "../Object/Player/Elf/ElfAttackArrowPunch.h"
 #include "../Object/Player/Elf/ElfAttackArrowShot.h"
 #include "../Object/Player/Elf/ElfAttackArrowChargeShot.h"
+
+#include "../Object/Player/Kinnikurou/Kinnikurou.h"
+//#include "../Object/Player/Kinnikurou/KinnnikuIdle.h"
+
+
 #include "../condition.h"
 #include <assert.h>
-
 #include <iostream>
 
 namespace// ここは仮のネームスペースです 候補：キャラ選択画面
 {
-	const char* const kPlayerImage = "Data/Image/Player/Elf/Elf.png";
+	const char* const kPlayerImage  = "Data/Image/Player/Elf/Elf.png";
+	const char* const kPlayerImage2 = "Data/Image/Player/Kinnikurou/Idle.png";
 }
 SceneMain::SceneMain(bool player1, bool player2, bool player3, bool player4) :
 	m_pos             (0.0f,0.0f),// プレイヤー位置
@@ -20,7 +25,9 @@ SceneMain::SceneMain(bool player1, bool player2, bool player3, bool player4) :
 	m_pElfIdol        (nullptr),
 	m_pElfAttackNormal(nullptr),
 	m_pElfAttackShot  (nullptr),
-	m_pElfAttackChargeShot(nullptr)
+	m_pElfAttackChargeShot(nullptr),
+	m_pKinnikurou(nullptr)//,
+//	m_pKinnnikuIdle(nullptr)
 {
 	m_isPlayerDrawTest[0] = player1;
 	m_isPlayerDrawTest[1] = player2;
@@ -33,6 +40,9 @@ SceneMain::SceneMain(bool player1, bool player2, bool player3, bool player4) :
 	m_pElfAttackShot       = new ElfAttackArrowShot;
 	m_pElfAttackChargeShot = new ElfAttackArrowChargeShot;
 
+	m_pKinnikurou          = new Kinnikurou;// きんにくろう用ポインタ類
+	//m_pKinnnikuIdle        = new KinnnikuIdle;
+
 	for (int i = 0; i < 4; i++)
 	{
 		m_vPos.push_back(Vec2(0.0f, 0.0f));
@@ -42,6 +52,7 @@ SceneMain::SceneMain(bool player1, bool player2, bool player3, bool player4) :
 		m_vImageSizeY.push_back(128);
 		m_vHPlayer.push_back(-1);
 	}
+
 }
 
 SceneMain::~SceneMain()
@@ -51,12 +62,16 @@ SceneMain::~SceneMain()
 	delete m_pElfAttackNormal;
 	delete m_pElfAttackShot;
 	delete m_pElfAttackChargeShot;
+
+	delete m_pKinnikurou;// きんにくろうポインタ解放
+//	delete m_pKinnnikuIdle;
 }
 
 void SceneMain::Init()
 {
 //	m_hPlayer = my::MyLoadGraph(kPlayerImage);// メモリに画像データ読み込み
 	m_vHPlayer[0] = my::MyLoadGraph(kPlayerImage);// メモリに画像データ読み込み
+	m_vHPlayer[1] = my::MyLoadGraph(kPlayerImage2);// メモリに画像データ読み込み
 
 	//writing_file.open(filename, std::ios::ate);//appファイル末尾から入力開始
 	//writing_file.close();// ファイルを閉じる
@@ -64,6 +79,10 @@ void SceneMain::Init()
 
 void SceneMain::End()
 {
+	for (int i = 0; i < 4; i++)
+	{
+		my::MyDeleteGraph(m_vHPlayer[i]);//画像データメモリ解放
+	}
 	my::MyDeleteGraph(m_hPlayer);//画像データメモリ解放
 }
 
@@ -156,9 +175,35 @@ void SceneMain::ElfData()// エルフ位置などの代入
 	m_bottom = m_pElf->SetPosBottom();
 }
 
+void SceneMain::KinnikurouMoveIdol()
+{
+	//m_pKinnnikuIdle->Update();// エルフのアイドル状態
+	//if (m_pKinnikurou->SetMove() == static_cast<int>(moveType::Idol))// 何もしていない場合はアイドル状態
+	//{
+	//	//m_imageX = m_pElfIdol->SetPosImageX();// アイドル状態用画像モーション位置
+	//	//m_imageY = m_pElfIdol->SetPosImageY();
+	//	m_vImageX[1] = m_pKinnnikuIdle->SetPosImageX();// アイドル状態用画像モーション位置
+	//	m_vImageY[1] = m_pKinnnikuIdle->SetPosImageY();
+	//}
+}
+
+void SceneMain::KinnikurouData()
+{
+	//m_pos.x = m_pElf->SetPos().x;// エルフの位置
+	//m_pos.y = m_pElf->SetPos().y;
+
+	//m_vPos[1].x = m_pKinnikurou->SetPos().x;// エルフの位置
+	//m_vPos[1].y = m_pKinnikurou->SetPos().y;
+
+	//m_left = m_pElf->SetPosLeft();
+	//m_top = m_pElf->SetPosTop();
+	//m_right = m_pElf->SetPosRight();
+	//m_bottom = m_pElf->SetPosBottom();
+}
+
 SceneBase* SceneMain::Update()
 {
-	if (m_isPlayerDrawTest)// エルフが選択されたかどうか
+	if (m_isPlayerDrawTest[0])// プレイヤー１が選択されたかどうか
 	{
 		m_pElf->Update();// エルフの行動命令
 		ElfMoveIdol	           ();// エルフ待機モーション
@@ -167,8 +212,18 @@ SceneBase* SceneMain::Update()
 		ElfMoveAttackChargeShot();// エルフチャージショット攻撃モーション
 		ElfData                ();// エルフ位置,方向,攻撃力,のデータ
 	}
+	if (m_isPlayerDrawTest[1])// プレイヤー２が選択されたかどうか
+	{
+		m_pKinnikurou->Update();
+	}
+	if (m_isPlayerDrawTest[2])// プレイヤー３が選択されたかどうか
+	{
 
+	}
+	if (m_isPlayerDrawTest[3])// プレイヤー４が選択されたかどうか
+	{
 
+	}
 
 	return this;
 }

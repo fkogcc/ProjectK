@@ -6,13 +6,14 @@
 #include <string>
 #include <vector>
 
-class Elf;
+class Elf;// エルフ
 class ElfIdol;
 class ElfAttackArrowPunch;
 class ElfAttackArrowShot;
 class ElfAttackArrowChargeShot;
 
-class Kinnikurou;
+class Kinnikurou;// きんにくろう
+class KinnnikuIdle;
 
 class Stage;
 
@@ -38,6 +39,9 @@ private:
 	void ElfMoveAttackChargeShot();// エルフチャージショット攻撃モーション
 	void ElfData();// エルフ位置,方向,攻撃力,のデータ
 
+	void KinnikurouMoveIdol();// きんにくろう待機モーション
+	void KinnikurouData();// きんにくろう位置,方向,攻撃力,のデータ
+
 	int m_hPlayer = -1;// プレイヤー画像データ
 	std::vector<int>m_vHPlayer;
 
@@ -59,7 +63,9 @@ private:
 	ElfAttackArrowShot* m_pElfAttackShot;
 	ElfAttackArrowChargeShot* m_pElfAttackChargeShot;
 
-	Kinnikurou* m_pKinnikurou;
+	Kinnikurou* m_pKinnikurou;// きんにくろうポインタ類
+	//KinnnikuIdle* m_pKinnnikuIdle;
+
 
 	std::shared_ptr<Stage> m_pStage;// ステージのポインタ
 

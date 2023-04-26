@@ -1,2 +1,39 @@
-﻿  Witch.cpp
-  Project_K.vcxproj -> C:\Users\fko2247078\Desktop\ProjectK\Project_K\x64\Debug\Project_K.exe
+﻿  KinnikurouJab.cpp
+  Kinnikurou.cpp
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.cpp(24,16): error C2061: 構文エラー: 識別子 'KinnikurouIdle'
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.cpp(29,16): warning C4150: 'KinnnikurouIdle' 型を削除するため delete 演算子が呼び出されましたが、定義がありません。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.h(5): message : 'KinnnikurouIdle' の宣言を確認してください
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.cpp(64,61): error C2027: 認識できない型 'KinnnikurouIdle' が使われています。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.h(5): message : 'KinnnikurouIdle' の宣言を確認してください
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.cpp(65,61): error C2027: 認識できない型 'KinnnikurouIdle' が使われています。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\Kinnikurou\Kinnikurou.h(5): message : 'KinnnikurouIdle' の宣言を確認してください
+  MoveTypeBase.cpp
+  ElfAttackArrowChargeShot.cpp
+  ElfAttackArrowPunch.cpp
+  ElfAttackArrowShot.cpp
+  Elf.cpp
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\elf\Elf.cpp(55,26): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Object\Player\elf\Elf.cpp(56,26): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  main.cpp
+  PlayerBase.cpp
+  ElfIdol.cpp
+  KinnnikuIdle.cpp
+  SceneBase.cpp
+  SceneCharacterSelect.cpp
+  SceneMain.cpp
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Scene\SceneMain.cpp(248,50): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Scene\SceneMain.cpp(246,49): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2247032\Desktop\ProjectK\Project_K\Scene\SceneMain.cpp(246,36): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  SceneManager.cpp
+  SceneMapSelect.cpp
+  SceneResult.cpp
+  SceneTitle.cpp
+  Stage.cpp
+  DrawFunctions.cpp
+  コードを生成中...
+  コンパイル中...
+  Pad.cpp
+  Vec2.cpp
+  Witch.cpp
+  WitchShot.cpp
+  コードを生成中...
