@@ -21,7 +21,7 @@ Kinnikurou::Kinnikurou() :
 	m_imgPosX(0),
 	m_imgPosY(0)
 {
-	m_pIdle = new KinnnikuIdle;
+	m_pIdle = new KinnikurouIdle;
 }
 
 Kinnikurou::~Kinnikurou()
@@ -61,8 +61,8 @@ void Kinnikurou::Update()
 	if (Pad::isPress(PAD_INPUT_LEFT))m_pos.x -= 10;
 
 	// ƒAƒCƒhƒ‹ó‘Ô
-	if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update(0, 0);
-	//if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update();
+	if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update();
+	if (m_moveType == static_cast<int>(moveType::Idol)) m_pIdle->Update();
 
 
 }

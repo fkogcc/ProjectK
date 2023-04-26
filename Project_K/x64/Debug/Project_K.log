@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 ﻿  KinnikurouJab.cpp
   Kinnikurou.cpp
@@ -39,3 +40,7 @@ DinosaurAttackScratch.obj : error LNK2001: 外部シンボル "public: virtual _
 DinosaurAttackShot.obj : error LNK2001: 外部シンボル "public: virtual __cdecl DinosaurAttackBase::~DinosaurAttackBase(void)" (??1DinosaurAttackBase@@UEAA@XZ) は未解決です
 E:\ProjectK\Project_K\x64\Debug\Project_K.exe : fatal error LNK1120: 1 件の未解決の外部参照
 >>>>>>> Stashed changes
+=======
+﻿  Witch.cpp
+  Project_K.vcxproj -> C:\Users\fko2247078\Desktop\ProjectK\Project_K\x64\Debug\Project_K.exe
+>>>>>>> parent of 6972755 (エラー消去)
